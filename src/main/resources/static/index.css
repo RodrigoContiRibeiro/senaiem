@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap');
+
+header.nav {
+    height: 10vh;
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #244F33;;
+    color: #fafafa;
+
+    font-family: 'Jost', sans-serif;
+}
+
+div.logo-container {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+div.links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+div.links-wrapper a, div.logo-container a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+main {
+    background: #244F33;
+}
+
+div.hero-container {
+    padding-top: 2rem;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20vh;
+}
+
+div.cta-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+h1.headline-text {
+    color: #71F59F;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 4rem;
+}
+
+h1.headline-text span {
+    font-weight: 900;
+}
+
+div.cta-container {
+    width: 12.5rem;
+    height: 3.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+div.cta-container.create {
+    background: #71F59F;
+    color: #244F33;
+}
+
+div.cta-container.view {
+    border: 2px solid #71f59f;
+    color: #71F59F;
+}
+
+div.cta-container a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* LIST ALUNO */
+main.list-alunos {
+   height: 90vh;
+   padding-top: 10vh;
+}
+
+main.list-alunos a{
+    color: inherit
+}
+
+.add-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    color: #fafafa
+}
+
+a.add-text {
+    padding: 1rem;
+    background: #53b576;
+    border: 2px solid #fafafa;
+    margin-bottom: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.table-alunos {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+    color: #fafafa;
+    font-family: 'Jost', sans-serif;
+    text-transform: lowercase;
+    border-collapse: collapse;
+    background: #36754C;
+}
+
+.table-head {
+    border-bottom: 2px solid #fafafa;
+    background: #53B576;
+}
+
+.table-alunos td {
+    padding: 0.5rem;
+    border-left: 1px solid #fafafa;
+    border-right: 1px solid #fafafa;
+}
+
+.table-head td:first-of-type, .table-row td:first-of-type {
+    border-left: none;
+}
+
+.table-head td:last-of-type, .table-row td:last-of-type {
+    border-right: none;
+}
+
+/* ADD ALUNO */
+main.aluno-add {
+    height: 90vh;
+}
+
+form.form {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    color: #fafafa;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+.form-control input, .form-control textarea{
+    font-family: 'Jost', sans-serif;
+    background: #36754C;
+    border: none;
+    color: #fafafa;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.form-control textarea {
+    height: 6rem;
+}
+
+.form-control.aluno.classe-ano {
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.submit-button {
+    width: 12.5rem;
+    height: 3.5rem;
+
+    background: #71F59F;
+    color: #244F33;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+

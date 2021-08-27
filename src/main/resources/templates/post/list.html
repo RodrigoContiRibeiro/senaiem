@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SENAI E.M.</title>
+    <link rel="stylesheet" th:href="@{/index.css}">
+</head>
+<body>
+<header class="nav">
+    <div class="logo-container">
+        <a th:href="@{/}" class="logo-text">senai e.m.</a>
+    </div>
+    <div class="links-wrapper">
+        <div class="link-container posts">
+            <a th:href="@{/posts}" class="link-text posts">posts</a>
+        </div>
+        <div class="link-container alunos">
+            <a th:href="@{/alunos}" class="link-text alunos">alunos</a>
+        </div>
+    </div>
+</header>
+<main class="list-alunos">
+    <div class="add-container">
+        <a th:href="@{/post/add}" class="add-text">Adicionar Post</a>
+    </div>
+    <table class="table-alunos">
+        <thead class="table-head">
+        <tr>
+            <td>id</td>
+            <td>nome</td>
+            <td>descrição</td>
+            <td>data</td>
+            <td>aluno id</td>
+            <td>edit</td>
+            <td>remove</td>
+        </tr>
+        </thead>
+        <tbody th:each="post : ${posts}" class="table-body">
+        <tr class="table-row">
+            <td th:text="${post.id}"></td>
+            <td th:text="${post.name}"></td>
+            <td th:text="${post.content}"></td>
+            <td th:text="${post.date}"></td>
+            <td th:text="${post.user_id}"></td>
+            <td><a th:href="@{/post/edit/{id}(id=${post.id})}">editar</a></td>
+            <td><a th:href="@{/post/delete/{id}(id=${post.id})}">remover</a></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SENAI E.M.</title>
+    <link rel="stylesheet" th:href="@{/index.css}">
+</head>
+<body>
+<header class="nav">
+    <div class="logo-container">
+        <a th:href="@{/}" class="logo-text">senai e.m.</a>
+    </div>
+    <div class="links-wrapper">
+        <div class="link-container posts">
+            <a th:href="@{/posts}" class="link-text posts">posts</a>
+        </div>
+        <div class="link-container alunos">
+            <a th:href="@{/alunos}" class="link-text alunos">alunos</a>
+        </div>
+    </div>
+</header>
+<main class="list-alunos">
+    <div class="add-container">
+        <a th:href="@{/aluno/add}" class="add-text">Adicionar Aluno</a>
+    </div>
+    <table class="table-alunos">
+        <thead class="table-head">
+            <tr>
+                <td>id</td>
+                <td>nome</td>
+                <td>ano</td>
+                <td>sala</td>
+                <td>edit</td>
+                <td>remove</td>
+            </tr>
+        </thead>
+        <tbody th:each="aluno : ${alunos}" class="table-body">
+            <tr class="table-row">
+                <td th:text="${aluno.id}"></td>
+                <td th:text="${aluno.name}"></td>
+                <td th:text="${aluno.grade}"></td>
+                <td th:text="${aluno.classroom}"></td>
+                <td><a th:href="@{/aluno/edit/{id}(id=${aluno.id})}">editar</a></td>
+                <td><a th:href="@{/aluno/delete/{id}(id=${aluno.id})}">remover</a></td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

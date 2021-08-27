@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SENAI E.M.</title>
+    <link rel="stylesheet" th:href="@{/index.css}">
+</head>
+<body>
+<header class="nav">
+    <div class="logo-container">
+        <a th:href="@{/}" class="logo-text">senai e.m.</a>
+    </div>
+    <div class="links-wrapper">
+        <div class="link-container posts">
+            <a th:href="@{/posts}" class="link-text posts">posts</a>
+        </div>
+        <div class="link-container alunos">
+            <a th:href="@{/alunos}" class="link-text alunos">alunos</a>
+        </div>
+    </div>
+</header>
+<main class="aluno-add">
+    <form class="form aluno" action="#" th:action="@{/post/save}" method="post" th:object="${post}">
+        <input th:field="*{id}" type="number" disabled hidden>
+        <div class="form-control aluno">
+            <label>nome</label>
+            <input th:field="*{name}" type="text" required>
+        </div>
+        <div class="form-control aluno">
+            <label>conteúdo</label>
+            <textarea th:field="*{content}" required></textarea>
+        </div>
+        <div class="form-control aluno">
+            <label>data</label>
+            <input th:field="*{date}" type="text" required placeholder="dd/mm/aaaa">
+        </div>
+        <div class="form-control aluno">
+            <label>id do usuário</label>
+            <input th:field="*{user_id}" type="text" required>
+        </div>
+        <button type="submit" class="submit-button">salvar</button>
+    </form>
+</main>
+</body>
+</html>
